@@ -1,3 +1,4 @@
-.idea/*
-.gradle/*
-
+20*/.idea/*
+20*/.gradle/*
+20*/gradle
+20*/build
