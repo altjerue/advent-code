@@ -11,7 +11,14 @@ public class TestDay2 {
     public void TestPartOne() throws FileNotFoundException {
         int testPuzzleValue = 58 + 43;
         WrappingPaper howMuchPaper = new WrappingPaper("src/test/input/day2_part1-test.txt");
-        assertEquals(testPuzzleValue, howMuchPaper.totalRequiredPaper());
+        assertEquals(testPuzzleValue, howMuchPaper.TotalRequiredPaper());
+    }
+
+    @Test
+    public void TestPartTwo() throws FileNotFoundException {
+        int testPuzzleValue = 34 + 14;
+        WrappingPaper howMuchPaper = new WrappingPaper("src/test/input/day2_part1-test.txt");
+        assertEquals(testPuzzleValue, howMuchPaper.TotalRequiredRibbon());
     }
 
 }

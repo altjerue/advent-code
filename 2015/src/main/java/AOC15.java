@@ -16,7 +16,8 @@ public class AOC15 {
 
         System.out.println("\n-----  Day 2  -----");
         WrappingPaper howMuchPaper = new WrappingPaper("src/main/input/day2_part1.txt");
-        System.out.println("Elves need " + howMuchPaper.totalRequiredPaper() + " square feet of paper"); // puzzle answer: 1588178
+        System.out.println("Elves need " + howMuchPaper.TotalRequiredPaper() + " square feet of wrapping paper"); // puzzle answer: 1588178
+        System.out.println("Elves need " + howMuchPaper.TotalRequiredRibbon() + " feet of ribbon"); // puzzle answer: 1588178
 
     }
 
