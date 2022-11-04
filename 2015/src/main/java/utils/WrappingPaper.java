@@ -12,11 +12,11 @@ public class WrappingPaper {
         this.inBoxSizes = boxSizes;
     }
 
-    private int BoxSurfaceArea(int l, int w, int h) {
+    private int boxSurfaceArea(int l, int w, int h) {
         return 2 * (l * w + w * h + h * l);
     }
 
-    private int SmallestSideArea(int l, int w, int h) {
+    private int smallestSideArea(int l, int w, int h) {
         int smallArea = l * w;
 
         if (smallArea > w * h) {
@@ -30,7 +30,7 @@ public class WrappingPaper {
         return smallArea;
     }
 
-    private int SmallestSidePerimeter(int l, int w, int h) {
+    private int smallestSidePerimeter(int l, int w, int h) {
         int smallPerim = 2 * (l + w);
 
         if (smallPerim > 2 * (w + h)) {
@@ -44,7 +44,7 @@ public class WrappingPaper {
         return smallPerim;
     }
 
-    public int TotalRequiredPaper() throws FileNotFoundException {
+    public int totalRequiredPaper() throws FileNotFoundException {
         int l;
         int w;
         int h;
@@ -66,14 +66,14 @@ public class WrappingPaper {
             l = Integer.parseInt(dimensions[0]);
             w = Integer.parseInt(dimensions[1]);
             h = Integer.parseInt(dimensions[2]);
-            totalSurface += BoxSurfaceArea(l, w, h) + SmallestSideArea(l, w, h);
+            totalSurface += boxSurfaceArea(l, w, h) + smallestSideArea(l, w, h);
         }
 
         this.boxes.close();
         return totalSurface;
     }
 
-    public int TotalRequiredRibbon() throws FileNotFoundException {
+    public int totalRequiredRibbon() throws FileNotFoundException {
         int l;
         int w;
         int h;
@@ -86,7 +86,7 @@ public class WrappingPaper {
             l = Integer.parseInt(dimensions[0]);
             w = Integer.parseInt(dimensions[1]);
             h = Integer.parseInt(dimensions[2]);
-            totalLength += (l * w * h) + SmallestSidePerimeter(l, w, h);
+            totalLength += (l * w * h) + smallestSidePerimeter(l, w, h);
         }
 
         this.boxes.close();

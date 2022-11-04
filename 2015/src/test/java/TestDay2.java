@@ -8,17 +8,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestDay2 {
 
     @Test
-    public void TestPartOne() throws FileNotFoundException {
+    public void testPartOne() throws FileNotFoundException {
         int testPuzzleValue = 58 + 43;
         WrappingPaper howMuchPaper = new WrappingPaper("src/test/input/day2_part1-test.txt");
-        assertEquals(testPuzzleValue, howMuchPaper.TotalRequiredPaper());
+        assertEquals(testPuzzleValue, howMuchPaper.totalRequiredPaper());
     }
 
     @Test
-    public void TestPartTwo() throws FileNotFoundException {
+    public void testPartTwo() throws FileNotFoundException {
         int testPuzzleValue = 34 + 14;
         WrappingPaper howMuchPaper = new WrappingPaper("src/test/input/day2_part1-test.txt");
-        assertEquals(testPuzzleValue, howMuchPaper.TotalRequiredRibbon());
+        assertEquals(testPuzzleValue, howMuchPaper.totalRequiredRibbon());
     }
 
 }

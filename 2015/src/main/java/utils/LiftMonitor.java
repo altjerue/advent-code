@@ -19,7 +19,7 @@ public class LiftMonitor {
         this.instructions = getInstructions.next();
     }
 
-    public int FloorFinder() {
+    public int floorFinder() {
         int i;
         int count = 0;
 
@@ -34,7 +34,7 @@ public class LiftMonitor {
         return count;
     }
 
-    public int FirstBasement() {
+    public int firstBasement() {
         int i;
         int count = 0;
         int basement = 0;
