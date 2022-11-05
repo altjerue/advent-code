@@ -1,3 +1,4 @@
+import utils.Delivering;
 import utils.LiftMonitor;
 import utils.WrappingPaper;
 
@@ -19,9 +20,9 @@ public class Aoc15 {
         System.out.println("Elves need " + howMuchPaper.totalRequiredPaper() + " square feet of wrapping paper"); // puzzle answer: 1588178
         System.out.println("Elves need " + howMuchPaper.totalRequiredRibbon() + " feet of ribbon"); // puzzle answer: 1588178
 
-
         System.out.println("\n-----  Day 3  -----");
-
+        Delivering thisManyOneGiftHouses = new Delivering("src/main/input/day3_part1.txt");
+        System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present.");
 
     }
 
