@@ -1,12 +1,15 @@
 package utils;
 
+import grid.Coordinates;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Delivering {
     String instructions;
-    // Scanner instructions;
+    public static boolean roboSantaOn = false;
 
     public Delivering(String elvishInstructions) throws FileNotFoundException {
         Scanner getInstructions = new Scanner(new FileReader(elvishInstructions));
@@ -14,46 +17,41 @@ public class Delivering {
     }
 
     public int countingHouses() {
-        int gridLength = this.instructions.length();
-        boolean[][] grid = new boolean[2 * gridLength + 1][2 * gridLength + 1];
-        int shiftNorthSouth = gridLength;
-        int shiftEastWest = gridLength;
+        final int gridLength = this.instructions.length();
         int totalHouses = 1;
         char move;
-
-        grid[shiftEastWest][shiftNorthSouth] = true;
+        boolean coordNotInPath = true;
+        Coordinates newSantaCoordinates = new Coordinates();
+        Coordinates newRoboSantaCoordinates = new Coordinates();
+        ArrayList<Coordinates> path = new ArrayList<>();
+        path.add(newSantaCoordinates);
 
         for (int l = 0; l < gridLength; l++) {
             move = this.instructions.charAt(l);
 
-            switch (move) {
-                case '^':
-                    shiftNorthSouth += 1;
-                    totalHouses = findInGrid(grid, shiftNorthSouth, shiftEastWest, totalHouses);
-                    break;
-                case 'v':
-                    shiftNorthSouth -= 1;
-                    totalHouses = findInGrid(grid, shiftNorthSouth, shiftEastWest, totalHouses);
-                    break;
-                case '>':
-                    shiftEastWest += 1;
-                    totalHouses = findInGrid(grid, shiftNorthSouth, shiftEastWest, totalHouses);
-                    break;
-                case '<':
-                    shiftEastWest -= 1;
-                    totalHouses = findInGrid(grid, shiftNorthSouth, shiftEastWest, totalHouses);
-                    break;
+            // TODO: separate paths: one for Santa (even numbers), and the other
+            //  for RoboSanta (odd numbers)
+            if (l % 2 == 0 && roboSantaOn) {
+                newRoboSantaCoordinates = Coordinates.shiftCoordinate(move,
+                        newRoboSantaCoordinates.getCoordinates().get(0),
+                        newRoboSantaCoordinates.getCoordinates().get(1));
+                coordNotInPath = Coordinates.isCoordinateNotInPath(newRoboSantaCoordinates, path);
+            } else {
+                newSantaCoordinates = Coordinates.shiftCoordinate(move,
+                        newSantaCoordinates.getCoordinates().get(0),
+                        newSantaCoordinates.getCoordinates().get(1));
+                coordNotInPath = Coordinates.isCoordinateNotInPath(newSantaCoordinates, path);
             }
-        }
-        return totalHouses;
-    }
 
-    private int findInGrid(boolean[][] grid, int shiftNorthSouth, int shiftEastWest, int totalHouses) {
-        if (!grid[shiftEastWest][shiftNorthSouth]) {
-            grid[shiftEastWest][shiftNorthSouth] = true;
-            totalHouses += 1;
+            if (coordNotInPath) {
+                totalHouses += 1;
+                coordNotInPath = false;
+            }
+
         }
+
         return totalHouses;
+
     }
 
 }

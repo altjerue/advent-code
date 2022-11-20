@@ -22,8 +22,9 @@ public class Aoc15 {
 
         System.out.println("\n-----  Day 3  -----");
         Delivering thisManyOneGiftHouses = new Delivering("src/main/input/day3_part1.txt");
-        System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present.");
-
+        System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present from Santa.");
+        Delivering.roboSantaOn = true;
+        System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present from Santa and Robo-Santa.");
     }
 
 
