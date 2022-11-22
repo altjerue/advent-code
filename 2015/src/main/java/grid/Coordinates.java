@@ -63,7 +63,6 @@ public class Coordinates {
                 shiftEW -= 1;
                 break;
         }
-
         return new Coordinates(shiftEW, shiftNS);
     }
 

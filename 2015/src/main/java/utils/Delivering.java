@@ -21,10 +21,11 @@ public class Delivering {
         int totalHouses = 1;
         char move;
         boolean coordNotInPath = true;
+        Coordinates newCoordinates = new Coordinates();
         Coordinates newSantaCoordinates = new Coordinates();
         Coordinates newRoboSantaCoordinates = new Coordinates();
         ArrayList<Coordinates> path = new ArrayList<>();
-        path.add(newSantaCoordinates);
+        path.add(newCoordinates);
 
         for (int l = 0; l < gridLength; l++) {
             move = this.instructions.charAt(l);
@@ -35,17 +36,18 @@ public class Delivering {
                 newRoboSantaCoordinates = Coordinates.shiftCoordinate(move,
                         newRoboSantaCoordinates.getCoordinates().get(0),
                         newRoboSantaCoordinates.getCoordinates().get(1));
-                coordNotInPath = Coordinates.isCoordinateNotInPath(newRoboSantaCoordinates, path);
+                newCoordinates = newRoboSantaCoordinates;
             } else {
                 newSantaCoordinates = Coordinates.shiftCoordinate(move,
                         newSantaCoordinates.getCoordinates().get(0),
                         newSantaCoordinates.getCoordinates().get(1));
-                coordNotInPath = Coordinates.isCoordinateNotInPath(newSantaCoordinates, path);
+                newCoordinates = newSantaCoordinates;
             }
+
+            coordNotInPath = Coordinates.isCoordinateNotInPath(newCoordinates, path);
 
             if (coordNotInPath) {
                 totalHouses += 1;
-                coordNotInPath = false;
             }
 
         }
