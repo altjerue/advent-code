@@ -38,7 +38,8 @@ public class Aoc15 {
                 System.out.println("The secret key is: " + getCryptoKey.startsSixZeros("2015/src/main/input/day4_part1.txt"));
             case 5:
                 System.out.println("\n-----  Day 5  -----");
-                System.out.println(String.format("The number of nice strings is: %d", StringAesthetics.howManyNiceStrings("2015/src/main/input/day5_part1.txt")));
+                System.out.println(String.format("The number of nice strings is: %d", StringAesthetics.howManyNiceStringsMethod1("2015/src/main/input/day5_part1.txt")));
+                System.out.println(String.format("The number of new nice strings is: %d", StringAesthetics.howManyNiceStringsMethod2("2015/src/main/input/day5_part1.txt")));
         }
     }
 
