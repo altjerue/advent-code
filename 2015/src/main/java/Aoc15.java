@@ -1,3 +1,4 @@
+import crypto.MD5;
 import utils.Delivering;
 import utils.LiftMonitor;
 import utils.WrappingPaper;
@@ -25,7 +26,11 @@ public class Aoc15 {
         System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present from Santa.");
         Delivering.roboSantaOn = true;
         System.out.println(thisManyOneGiftHouses.countingHouses() + " received at least one present from Santa and Robo-Santa.");
-    }
 
+        System.out.println("\n-----  Day 4  -----");
+        MD5 getCryptoKey = new MD5();
+        System.out.println("The secret key is: " + getCryptoKey.startsFiveZeros("src/main/input/day4_part1.txt"));
+
+    }
 
 }
