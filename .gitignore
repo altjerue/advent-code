@@ -2,3 +2,5 @@
 20*/.gradle/*
 20*/gradle
 20*/build
+.idea/
+.idea/*

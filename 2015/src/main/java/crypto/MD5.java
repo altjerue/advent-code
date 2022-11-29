@@ -43,4 +43,20 @@ public class MD5 {
         return newInput;
     }
 
+    public String startsSixZeros(String inputFile) throws FileNotFoundException {
+        int i = 0;
+        String input;
+        Scanner getInput = new Scanner(new FileReader(inputFile));
+
+        input = getInput.next();
+        String newInput = input.concat(String.valueOf(i));
+        String md5 = getMd5(newInput);
+
+        while (!md5.substring(0, 6).equals("000000")) {
+            i += 1;
+            newInput = input + Integer.toString(i);
+            md5 = getMd5(newInput);
+        }
+        return newInput;
+    }
 }
