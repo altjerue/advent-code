@@ -1,9 +1,8 @@
 package Day3;
 
 import Day3.grid.Coordinates;
+import utils.getInputData;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,8 +10,8 @@ public class Delivering {
     String instructions;
     public static boolean roboSantaOn = false;
 
-    public Delivering(String elvishInstructions) throws FileNotFoundException {
-        Scanner getInstructions = new Scanner(new FileReader(elvishInstructions));
+    public Delivering(String elvishInstructions) {
+        Scanner getInstructions = getInputData.getInputDataFromFile(elvishInstructions);
         this.instructions = getInstructions.next();
     }
 

@@ -1,7 +1,7 @@
 package Day2;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import utils.getInputData;
+
 import java.util.Scanner;
 
 public class WrappingPaper {
@@ -44,7 +44,7 @@ public class WrappingPaper {
         return smallPerim;
     }
 
-    public int totalRequiredPaper() throws FileNotFoundException {
+    public int totalRequiredPaper() {
         int l;
         int w;
         int h;
@@ -54,7 +54,7 @@ public class WrappingPaper {
         Scanner function has this capability of getting a stream of characters.
         In this case from a FileReader class.
          */
-        this.boxes = new Scanner(new FileReader(this.inBoxSizes));
+        this.boxes = getInputData.getInputDataFromFile(this.inBoxSizes);
 
         /*
         To iterate through all the lines in our file, we use the hasNextLine
@@ -73,13 +73,13 @@ public class WrappingPaper {
         return totalSurface;
     }
 
-    public int totalRequiredRibbon() throws FileNotFoundException {
+    public int totalRequiredRibbon() {
         int l;
         int w;
         int h;
         int totalLength = 0;
 
-        this.boxes = new Scanner(new FileReader(this.inBoxSizes));
+        this.boxes = getInputData.getInputDataFromFile(this.inBoxSizes);
 
         while(this.boxes.hasNextLine()) {
             String[] dimensions = this.boxes.nextLine().split("x");

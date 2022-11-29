@@ -1,7 +1,7 @@
 package Day4;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import utils.getInputData;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -25,10 +25,10 @@ public class MD5 {
             return String.format("%032x", new BigInteger(1, digest));
     }
 
-    public String startsFiveZeros(String inputFile) throws FileNotFoundException {
+    public String startsFiveZeros(String inputFile) {
         int i = 0;
         String input;
-        Scanner getInput = new Scanner(new FileReader(inputFile));
+        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
 
         input = getInput.next();
         String newInput = input.concat(String.valueOf(i));
@@ -43,10 +43,10 @@ public class MD5 {
         return newInput;
     }
 
-    public String startsSixZeros(String inputFile) throws FileNotFoundException {
+    public String startsSixZeros(String inputFile) {
         int i = 0;
         String input;
-        Scanner getInput = new Scanner(new FileReader(inputFile));
+        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
 
         input = getInput.next();
         String newInput = input.concat(String.valueOf(i));

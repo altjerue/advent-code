@@ -1,13 +1,13 @@
 package Day1;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import utils.getInputData;
+
 import java.util.Scanner;
 
 public class LiftMonitor {
     private String instructions;
 
-    public LiftMonitor(String instructionsInput) throws FileNotFoundException {
+    public LiftMonitor(String instructionsInput) {
         /*
         Using Scanner class, found in java.util. This class is used to read
         input data from different kind of sources like files.
@@ -15,7 +15,7 @@ public class LiftMonitor {
         If I want to read from command line, Scanner must have the argument
         System.in, i.e., Scanner(System.in).
          */
-        Scanner getInstructions = new Scanner(new FileReader(instructionsInput));
+        Scanner getInstructions = getInputData.getInputDataFromFile(instructionsInput);
         this.instructions = getInstructions.next();
     }
 
