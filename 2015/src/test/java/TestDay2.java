@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import utils.WrappingPaper;
+import Day2.WrappingPaper;
 
 import java.io.FileNotFoundException;
 

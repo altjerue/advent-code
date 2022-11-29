@@ -1,4 +1,4 @@
-import crypto.MD5;
+import Day4.MD5;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;

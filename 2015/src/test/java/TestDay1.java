@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import utils.LiftMonitor;
+import Day1.LiftMonitor;
 
 import java.io.FileNotFoundException;
 import static org.junit.jupiter.api.Assertions.assertEquals;

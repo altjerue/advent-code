@@ -1,7 +1,7 @@
-import crypto.MD5;
-import utils.Delivering;
-import utils.LiftMonitor;
-import utils.WrappingPaper;
+import Day4.MD5;
+import Day3.Delivering;
+import Day2.WrappingPaper;
+import Day1.LiftMonitor;
 
 import java.io.FileNotFoundException;
 
