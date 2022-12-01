@@ -1,6 +1,6 @@
 package Day2;
 
-import utils.getInputData;
+import utils.InputData;
 
 import java.util.Scanner;
 
@@ -54,7 +54,7 @@ public class WrappingPaper {
         Scanner function has this capability of getting a stream of characters.
         In this case from a FileReader class.
          */
-        this.boxes = getInputData.getInputDataFromFile(this.inBoxSizes);
+        this.boxes = InputData.getInputDataFromFile(this.inBoxSizes);
 
         /*
         To iterate through all the lines in our file, we use the hasNextLine
@@ -79,7 +79,7 @@ public class WrappingPaper {
         int h;
         int totalLength = 0;
 
-        this.boxes = getInputData.getInputDataFromFile(this.inBoxSizes);
+        this.boxes = InputData.getInputDataFromFile(this.inBoxSizes);
 
         while(this.boxes.hasNextLine()) {
             String[] dimensions = this.boxes.nextLine().split("x");

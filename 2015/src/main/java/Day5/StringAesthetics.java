@@ -1,6 +1,6 @@
 package Day5;
 
-import utils.getInputData;
+import utils.InputData;
 
 import java.util.Scanner;
 
@@ -58,7 +58,7 @@ public class StringAesthetics {
 
     public static int howManyNiceStringsMethod1(String inputFile) {
         int niceStrings = 0;
-        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
+        Scanner getInput = InputData.getInputDataFromFile(inputFile);
         while(getInput.hasNextLine()) {
             String string = getInput.nextLine().toString();
             if (hasBannedStrings(string)) {
@@ -76,7 +76,7 @@ public class StringAesthetics {
 
     public static int howManyNiceStringsMethod2(String inputFile) {
         int niceStrings = 0;
-        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
+        Scanner getInput = InputData.getInputDataFromFile(inputFile);
         while(getInput.hasNextLine()) {
             String string = getInput.nextLine().toString();
             if (hasDoubleLetterInbetweener(string) && hasDoubleDoubleLetter(string)) {

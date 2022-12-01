@@ -1,6 +1,6 @@
 package Day1;
 
-import utils.getInputData;
+import utils.InputData;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class LiftMonitor {
         If I want to read from command line, Scanner must have the argument
         System.in, i.e., Scanner(System.in).
          */
-        Scanner getInstructions = getInputData.getInputDataFromFile(instructionsInput);
+        Scanner getInstructions = InputData.getInputDataFromFile(instructionsInput);
         this.instructions = getInstructions.next();
     }
 

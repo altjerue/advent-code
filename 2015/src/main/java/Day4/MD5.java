@@ -1,6 +1,6 @@
 package Day4;
 
-import utils.getInputData;
+import utils.InputData;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -28,7 +28,7 @@ public class MD5 {
     public String startsFiveZeros(String inputFile) {
         int i = 0;
         String input;
-        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
+        Scanner getInput = InputData.getInputDataFromFile(inputFile);
 
         input = getInput.next();
         String newInput = input.concat(String.valueOf(i));
@@ -46,7 +46,7 @@ public class MD5 {
     public String startsSixZeros(String inputFile) {
         int i = 0;
         String input;
-        Scanner getInput = getInputData.getInputDataFromFile(inputFile);
+        Scanner getInput = InputData.getInputDataFromFile(inputFile);
 
         input = getInput.next();
         String newInput = input.concat(String.valueOf(i));

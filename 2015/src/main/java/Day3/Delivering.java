@@ -1,7 +1,7 @@
 package Day3;
 
-import Day3.grid.Coordinates;
-import utils.getInputData;
+import utils.Coordinates;
+import utils.InputData;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class Delivering {
     public static boolean roboSantaOn = false;
 
     public Delivering(String elvishInstructions) {
-        Scanner getInstructions = getInputData.getInputDataFromFile(elvishInstructions);
+        Scanner getInstructions = InputData.getInputDataFromFile(elvishInstructions);
         this.instructions = getInstructions.next();
     }
 
