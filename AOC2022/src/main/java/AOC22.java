@@ -10,6 +10,7 @@ public class AOC22 {
             case 1:
                 System.out.println("-----  Day 1  -----");
                 System.out.println("The Elf carrying most calories has " + Calories.maxCalories("src/main/resources/input/day1-part1.txt"));
+                System.out.println("The Elf carrying most calories has " + Calories.max3Calories("src/main/resources/input/day1-part1.txt"));
                 // System.out.println("Elves need " + howMuchPaper.totalRequiredPaper() + " square feet of wrapping paper");
                 break;
             default:

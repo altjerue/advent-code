@@ -10,4 +10,10 @@ public class TestDay1 {
         assertEquals(testPuzzleValue, Calories.maxCalories("src/test/resources/input/day1_part1-test.txt"));
     }
 
+    @Test
+    public void testPartTwo() {
+        int testPuzzleValue = 45000;
+        assertEquals(testPuzzleValue, Calories.max3Calories("src/test/resources/input/day1_part1-test.txt"));
+    }
+
 }
