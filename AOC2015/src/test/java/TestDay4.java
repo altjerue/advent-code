@@ -10,9 +10,9 @@ public class TestDay4 {
         String testPuzzleValue;
         MD5 getCryptoKey = new MD5();
         testPuzzleValue = "abcdef609043";
-        assertEquals(testPuzzleValue, getCryptoKey.startsFiveZeros("src/test/input/day4_part1-test.txt"));
+        assertEquals(testPuzzleValue, getCryptoKey.startsFiveZeros("src/test/resources/input/day4_part1-test.txt"));
         testPuzzleValue = "pqrstuv1048970";
-        assertEquals(testPuzzleValue, getCryptoKey.startsFiveZeros("src/test/input/day4_part1-test2.txt"));
+        assertEquals(testPuzzleValue, getCryptoKey.startsFiveZeros("src/test/resources/input/day4_part1-test2.txt"));
     }
 
 }
