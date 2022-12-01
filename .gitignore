@@ -1,6 +1,6 @@
-20*/.idea/*
-20*/.gradle/*
-20*/gradle
-20*/build
+AOC20*/.idea/*
+AOC20*/.gradle/*
+AOC20*/gradle
+AOC20*/build
 .idea/
 .idea/*
