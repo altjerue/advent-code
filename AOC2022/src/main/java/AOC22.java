@@ -1,4 +1,5 @@
 import Day1.Calories;
+import Day2.LoseDrawWin;
 import Day2.RockPaperScissors;
 
 /**
@@ -16,6 +17,7 @@ public class AOC22 {
             case 2:
                 System.out.println("-----  Day 2  -----");
                 System.out.println("The Elf carrying most calories has " + RockPaperScissors.rpsScore("src/main/resources/input/day2-part1.txt"));
+                System.out.println("The Elf carrying most calories has " + LoseDrawWin.rpsScore("src/main/resources/input/day2-part1.txt"));
                 break;
             default:
                 System.out.println("We haven't done that day yet!");
