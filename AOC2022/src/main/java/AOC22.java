@@ -1,7 +1,6 @@
 import Day1.Calories;
 import Day2.LoseDrawWin;
 import Day2.RockPaperScissors;
-import Day3.Priorities;
 import Day3.Rucksacks;
 
 /**

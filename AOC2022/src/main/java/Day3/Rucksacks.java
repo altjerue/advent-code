@@ -8,8 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static utils.Duplicates.removeDuplicates;
-
 public class Rucksacks {
 
     public static int findPriorities(String itemsFile) {
@@ -17,7 +15,6 @@ public class Rucksacks {
         String secondCompartment;
         String items;
         int totalPriority = 0;
-        int currentPriority = 0;
         Scanner allItems = InputData.getInputDataFromFile(itemsFile);
 
         while (allItems.hasNextLine()) {
@@ -40,7 +37,6 @@ public class Rucksacks {
         String thirdCompartment;
         List<String> items = null;
         int totalPriority = 0;
-        int currentPriority = 0;
         Scanner allItems = InputData.getInputDataFromFile(itemsFile);
 
         while (allItems.hasNextLine()) {
