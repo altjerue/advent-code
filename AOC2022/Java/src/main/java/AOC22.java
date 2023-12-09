@@ -25,6 +25,9 @@ public class AOC22 {
                 System.out.println("The total priority of the items in all rucksacks is " + Rucksacks.findPriorities("src/main/resources/input/day3-part1.txt"));
                 System.out.println("The total priority of the items in all rucksacks is " + Rucksacks.findPrioritiesByGroups("src/main/resources/input/day3-part1.txt"));
                 break;
+            case 4:
+                System.out.println("-----  Day 3  -----");
+                break;
             default:
                 System.out.println("We haven't done that day yet!");
                 break;

@@ -4,3 +4,4 @@ Here we'll be solving all the [Advent of Code](https://adventofcode.com) challen
 
 - 2015: [folder](AOC2015/), [challenges](https://adventofcode.com/2015)
 - 2022: [folder](AOC2022/), [challenges](https://adventofcode.com/2022)
+- 2022: [folder](AOC2023/), [challenges](https://adventofcode.com/2023)

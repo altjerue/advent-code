@@ -1,6 +1,8 @@
-AOC20*/.idea/*
-AOC20*/.gradle/*
-AOC20*/gradle
-AOC20*/build
+*/Java/.idea/*
+*/Java/.gradle
+*/Java/gradle
+*/Java/build
+*/Java/bin
 .idea/
 .idea/*
+.vscode
