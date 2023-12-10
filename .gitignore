@@ -2,6 +2,8 @@
 */Java/.gradle
 */Java/gradle
 */Java/build
+*/Java/build/*
+*/Java/build/classes/java/*
 */Java/bin
 .idea/
 .idea/*

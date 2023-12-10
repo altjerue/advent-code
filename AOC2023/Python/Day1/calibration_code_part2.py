@@ -17,7 +17,7 @@ test_values2 = ['two1nine', 'eightwothree', 'abcone2threexyz', 'xtwone3four', '4
 
 assert calibration_str(test_values2) == 281
 
-with open("AOC2023/Python/Day1/day1_puzzle2.txt", 'r') as f:
+with open("AOC2023/Python/Day1/input_day1_part2.txt", 'r') as f:
     input_values = [line for line in f.read().splitlines()]
 
 print(input_values[:5])

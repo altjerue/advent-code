@@ -12,7 +12,7 @@ test_values1 = ['1abc2', 'pqr3stu8vwx', 'a1b2c3d4e5f', 'treb7uchet']
 
 assert calibration(test_values1) == 142
 
-with open("AOC2023/Python/Day1/day1_puzzle1.txt", 'r') as f:
+with open("AOC2023/Python/Day1/input_day1_part1.txt", 'r') as f:
     input_values = [line for line in f.read().splitlines()]
 
 calibration(input_values)
